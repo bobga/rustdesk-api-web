@@ -547,5 +547,14 @@
   },
   "Remark": {
     "One": "備註"
+  },
+  "UserMaxDevices": {
+    "One": "裝置數量上限"
+  },
+  "UserMaxDevicesHint": {
+    "One": "此帳號可綁定的 裝置數量。填 0 表示使用全站預設（設定 max_devices_per_user，或由資料庫 sys_settings 覆寫）。大於 0 的整數僅套用於此帳號，覆寫全域預設。"
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "繼承全站預設"
   }
 }

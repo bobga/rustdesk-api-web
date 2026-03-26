@@ -547,5 +547,14 @@
   },
   "Remark": {
     "One": "备注"
+  },
+  "UserMaxDevices": {
+    "One": "设备数量上限"
+  },
+  "UserMaxDevicesHint": {
+    "One": "该账号允许绑定的 设备数量。填写 0 表示使用全站默认（配置 max_devices_per_user，或由数据库 sys_settings 覆盖）。填写大于 0 的整数仅对本账号生效，覆盖全局默认值。"
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "继承全站默认"
   }
 }

@@ -24,6 +24,12 @@
             <span v-else> - </span>
           </template>
         </el-table-column>
+        <el-table-column :label="T('UserMaxDevices')" align="center" width="140">
+          <template #default="{row}">
+            <span v-if="userHasCustomDeviceLimit(row.max_devices)">{{ Number(row.max_devices) }}</span>
+            <el-tag v-else size="small" type="info">{{ T('UserMaxDevicesGlobal') }}</el-tag>
+          </template>
+        </el-table-column>
         <el-table-column :label="T('Status')" align="center">
           <template #default="{row}">
             <el-switch v-model="row.status"
@@ -66,6 +72,13 @@
   import { update } from '@/api/user'
   import { ElMessageBox, ElMessage } from 'element-plus'
   import { onMounted, watch } from 'vue'
+
+  /** Per-user cap > 0; 0 / null / undefined = inherit global (see API max_devices). */
+  function userHasCustomDeviceLimit (v) {
+    const n = Number(v)
+    return Number.isFinite(n) && n > 0
+  }
+
   //列表
   const {
     listRes,

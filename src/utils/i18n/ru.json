@@ -534,6 +534,15 @@
   },
   "Remark": {
     "One": "Примечание"
+  },
+  "UserMaxDevices": {
+    "One": "Макс. устройств"
+  },
+  "UserMaxDevicesHint": {
+    "One": "Максимум клиентов для этого аккаунта. 0 — общий лимит (max_devices_per_user в конфиге или sys_settings в БД). Целое больше 0 — только для этого пользователя."
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "Общий лимит (0)"
   }
 }
 

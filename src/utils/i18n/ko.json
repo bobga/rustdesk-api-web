@@ -517,5 +517,14 @@
   },
   "Remark": {
     "One": "비고"
+  },
+  "UserMaxDevices": {
+    "One": "최대 기기 수"
+  },
+  "UserMaxDevicesHint": {
+    "One": "이 계정에 연결할 클라이언트 수 상한입니다. 0이면 전역 기본값(설정 max_devices_per_user 또는 DB sys_settings)을 사용합니다. 0보다 큰 값은 이 사용자에게만 적용됩니다."
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "전역 기본값 사용"
   }
 }

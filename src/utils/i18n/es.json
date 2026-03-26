@@ -531,5 +531,14 @@
   },
   "Remark": {
     "One": "Remark"
+  },
+  "UserMaxDevices": {
+    "One": "Máx. dispositivos"
+  },
+  "UserMaxDevicesHint": {
+    "One": "Máximo de clientes vinculados a esta cuenta. Use 0 para el límite global (max_devices_per_user o sys_settings). Un entero mayor que 0 aplica solo a este usuario."
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "Predeterminado del servidor"
   }
 }

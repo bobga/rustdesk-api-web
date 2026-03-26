@@ -8,6 +8,7 @@ import fr from 'element-plus/es/locale/lang/fr'
 import es from 'element-plus/es/locale/lang/es'
 import zhTw from 'element-plus/es/locale/lang/zh-tw'
 import { admin, app, server } from '@/api/config'
+import { normalizeAppLang } from '@/utils/i18n_locale'
 
 const langs = {
   'zh-CN': { name: '中文', value: zhCn, sideBarWidth: '210px' },
@@ -18,7 +19,9 @@ const langs = {
   'es': { name: 'Español', value: es, sideBarWidth: '280px' },
   'zh-TW': { name: '中文繁体', value: zhTw, sideBarWidth: '210px' },
 }
-const defaultLang = localStorage.getItem('lang') || navigator.language || 'zh-CN'
+const defaultLang = normalizeAppLang(
+  localStorage.getItem('lang') || (typeof navigator !== 'undefined' && navigator.language) || 'zh-CN'
+)
 export const useAppStore = defineStore({
   id: 'App',
   state: () => ({
@@ -47,10 +50,10 @@ export const useAppStore = defineStore({
       this.setting.sideIsCollapse = !this.setting.sideIsCollapse
     },
     setLang (lang) {
-      console.log('setLang', lang)
-      this.setting.lang = lang
-      this.setting.locale = langs[lang]
-      localStorage.setItem('lang', lang)
+      const canonical = normalizeAppLang(lang)
+      this.setting.lang = canonical
+      this.setting.locale = langs[canonical] || langs['en']
+      localStorage.setItem('lang', canonical)
     },
     changeLang (v) {
       this.setLang(v)

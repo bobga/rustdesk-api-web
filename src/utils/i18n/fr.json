@@ -534,5 +534,14 @@
   },
   "Remark": {
     "One": "Remarque"
+  },
+  "UserMaxDevices": {
+    "One": "Nb max. d'appareils"
+  },
+  "UserMaxDevicesHint": {
+    "One": "Nombre maximal de clients liés à ce compte. 0 : appliquer la limite globale (max_devices_per_user dans la config ou sys_settings en base). Valeur > 0 : plafond propre à cet utilisateur uniquement."
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "Limite globale (0)"
   }
 }

@@ -531,5 +531,14 @@
   },
   "Remark": {
     "One": "Remark"
+  },
+  "UserMaxDevices": {
+    "One": "Max devices"
+  },
+  "UserMaxDevicesHint": {
+    "One": "Maximum devices this user may bind. Use 0 to apply the server-wide default (from config or database). Any value greater than 0 overrides that default for this user only."
+  },
+  "UserMaxDevicesGlobal": {
+    "One": "Inherit server default"
   }
 }
