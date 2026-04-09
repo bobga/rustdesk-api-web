@@ -22,7 +22,7 @@ export function useRepositories () {
     listRes.loading = false
     if (res) {
       listRes.list = res.data.list.map(item => {
-        item.close_time = item.close_time ? formatTime(item.close_time * 1000) : '-'
+        item.close_time = item.close_time_str || (item.close_time ? formatTime(item.close_time * 1000) : '-')
         return item
       })
       listRes.total = res.data.total
